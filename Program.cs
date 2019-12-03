@@ -10,8 +10,8 @@ namespace CompanyHierarchy
     {
         static void Main(string[] args)
         {
-            Employee emp = new Employee("Aaron", "Ramsey", "a67458", "Sales", 900);
-            Employee emp1 = new Employee("George", "Green", "k65477", "Marketing", 1100);
+            RegularEmployee emp = new RegularEmployee("Aaron", "Ramsey", "a67458", "Sales", 900);
+            RegularEmployee emp1 = new RegularEmployee("George", "Green", "k65477", "Marketing", 1100);
             Manager manager = new Manager("John", "Doe", "p74879", "Production", 2000);
             manager.Add(emp);
             manager.Add(emp1);

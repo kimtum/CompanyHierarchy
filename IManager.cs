@@ -8,12 +8,12 @@ namespace CompanyHierarchy
 {
     interface IManager
     {
-        HashSet<Employee> UnderCommand { get; }
-        bool Add(Employee emp);
+        HashSet<RegularEmployee> UnderCommand { get; }
+        bool Add(RegularEmployee emp);
         int Count { get; }
-        bool Remove(Employee emp);
+        bool Remove(RegularEmployee emp);
         void Clear();
-        bool Contains(Employee emp);
-        IEnumerator<Employee> GetEnumerator();
+        bool Contains(RegularEmployee emp);
+        IEnumerator<RegularEmployee> GetEnumerator();
     }
 }

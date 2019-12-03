@@ -12,13 +12,13 @@ namespace CompanyHierarchy
         public Manager(string first, string last, string id, string department, uint salary)
             : base(first, last, id, department, salary)
         {
-            this.UnderCommand = new HashSet<Employee>();
+            this.UnderCommand = new HashSet<RegularEmployee>();
         }
 
-        public HashSet<Employee> UnderCommand{ get; private set; }
+        public HashSet<RegularEmployee> UnderCommand{ get; private set; }
         
 
-        public bool Add(Employee emp)
+        public bool Add(RegularEmployee emp)
         {
             return this.UnderCommand.Add(emp);
         }
@@ -29,7 +29,7 @@ namespace CompanyHierarchy
             this.UnderCommand.Clear();
         }
 
-        public bool Contains(Employee emp) 
+        public bool Contains(RegularEmployee emp) 
         { 
             return this.UnderCommand.Contains(emp); 
         }
@@ -38,12 +38,12 @@ namespace CompanyHierarchy
         public int Count => this.UnderCommand.Count;
                 
 
-        public IEnumerator<Employee> GetEnumerator()
+        public IEnumerator<RegularEmployee> GetEnumerator()
         {
             return this.UnderCommand.GetEnumerator();
         }
 
-        public bool Remove(Employee emp)
+        public bool Remove(RegularEmployee emp)
         {
             return this.UnderCommand.Remove(emp);
         }
